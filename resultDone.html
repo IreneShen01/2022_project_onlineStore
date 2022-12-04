@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Create New Customer</title>
+</head>
+<body>
+<div class="container" style="margin: 20px">
+<h5><b>感謝訂閱-資訊如下</b></h5>
+<table class="table table-bordered">
+<tr>
+  <th><b>Name</b></th>
+  <th><b>Email</b></th>
+</tr>
+<tr th:object="${Client}">
+    <td th:text="*{clientname}">admin</td>
+    <td th:text="*{name}">admin@demo.com</td>
+</tr>
+
+</table>
+</div>
+</body>
+</html>

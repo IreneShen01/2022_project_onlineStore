@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Index Web Page</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .w3-sidebar a {
+            font-family: "Roboto", sans-serif
+        }
+
+        body,h1,h2,h3,h4,h5,h6,
+        .w3-wide {
+            font-family: "Montserrat", sans-serif;
+        }
+    </style>
+</head>
+<body class="w3-content" style="max-width:1200px">
+<!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+        <div class="w3-container w3-display-container w3-padding-16">
+            <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        </div>
+        
+        <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+		<a href="index" class="w3-bar-item w3-button w3-padding-large w3-hover-red">首頁</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large w3-hover-blue"
+                onclick="document.getElementById('newsletter2').style.display='block'">服務</a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large w3-hover-blue"
+                onclick="document.getElementById('newsletter').style.display='block'">訂閱</a>
+            <a href="login" class="w3-bar-item w3-button w3-padding-large w3-hover-red">登入</a>
+                <!-- 
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-large w3-hover-blue"
+                onclick="document.getElementById('newsletterAAA').style.display='block'">登入</a>
+                 -->
+                
+            <div><br></div>
+<!-- Navbar -->
+        <a href="makeup" class="w3-bar-item w3-button w3-padding-large">美妝保養</a>
+            <a href="appleStore" class="w3-bar-item w3-button w3-padding-large">好吃蘋果</a>
+            <a href="client" class="w3-bar-item w3-button w3-padding-large">精品手飾</a>
+            <a href="computerweb" class="w3-bar-item w3-button w3-padding-large">商務筆電</a>
+            <a href="myhomebody" class="w3-bar-item w3-button w3-padding-large">優良小物</a>
+            <a href="hMProducts" class="w3-bar-item w3-button w3-padding-large">工學座椅</a>
+        <a href="member" class="w3-bar-item w3-button w3-padding-large w3-hover-red">會員中心</a>
+        <a href="shopcar" class="w3-bar-item w3-button w3-padding-large w3-hover-red">購物車</a>
+          <span class="w3-right w3-padding-large" th:text="${member.username}"></span>
+    </nav>
+<!-- Navbar --> 
+        </div>
+    </nav>
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i
+                class="fa fa-bars"></i></a>
+    </header>
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
+        id="myOverlay"></div>
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+    <!-- Push down content on small screens -->
+        <div class="w3-hide-large" style="margin-top:83px"></div>
+        
+    <!-- Top header -->
+        <div class="jumbotron text-center">
+            <h1 class="display-1"><b>Anping Beauty</b></h1>
+  		</div>
+  		<div class="w3-container w3-text-grey" id="movie">
+		<p>3 items</p>
+		</div>
+		<!-- Product grid -->
+        <div class="w3-row ">
+            <div class="w3-col l4 s12">
+                <div class="w3-display-container">
+                	<a href="javascript:void(0)" onclick="document.getElementById('newsletterA').style.display='block'">
+                    <img src="images/A.webp" alt="A" width="100%">
+                    </a>
+   					 <div class="card-body">
+   					   <h4 class="card-title">A廠-日韓風格飾品</h4>
+  					    <p class="card-text">珠寶是藝術的語言， A廠擅長使用多彩的天然石、水晶及珍珠創造出具備流行及質感的飾品，讓自我風格更加獨特，設計不時也可看到蝴蝶、愛心等元素被設計得仙氣滿滿，也許我對你一無所知，但你戴上了它，我知道你一定溫柔似水。</p>
+ 					</div>
+            </div>
+            </div>
+            <div class="w3-col l4 s12">
+                <div class="w3-display-container">
+                	<a href="javascript:void(0)" onclick="document.getElementById('newsletterB').style.display='block'">
+                    <img src="images/B.webp" alt="B" width="100%">
+                    </a>
+   					 <div class="card-body">
+   					   <h4 class="card-title">B廠-歐美鈦鋼飾品</h4>
+  					    <p class="card-text">大多飾品都以選用優質鈦鋼，耐用不易掉色，B廠擅長走復古與歐美風，所有的設計都充滿了一種巴洛克時期的情調，各種符號的設計元素，它精緻、可疊戴、可混搭，成為平淡穿搭中讓人不可忽視存在。</p>
+ 					</div>
+            </div>
+            </div>
+            <div class="w3-col l4 s12">
+                <div class="w3-display-container">
+                	<a href="javascript:void(0)" onclick="document.getElementById('newsletterC').style.display='block'">
+                    <img src="images/C.webp" alt="C" width="100%">
+                    </a>
+   					 <div class="card-body">
+   					   <h4 class="card-title">C廠-S925韓系銀飾</h4>
+  					    <p class="card-text">專注流行韓系風格的C廠，設計給人簡單乾淨的感覺，簡潔、純粹卻包含力量感，經典的單品哪怕看起來低調些，但他可以陪伴你更久。</p>
+ 					</div>
+            </div>
+            </div>
+        </div>
+        
+        <div class="w3-light-grey w3-center w3-padding-24">copyright ⓒ 2022 BigBuy Inc. All Rights Reserved.</div>
+<!-- End page content -->
+<!-- Newsletter Modal -->
+    <div id="newsletter" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+                <i onclick="document.getElementById('newsletter').style.display='none'"
+                    class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <!-- Contact Container -->
+                <div class="w3-container w3-padding-16 w3-theme-l5" id="contact">
+                    <div class="w3-row">
+                        <div class="w3-col m20">
+                            <form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+                            	<h3 class="display-15">請輸入資料</h3>
+                                <div class="w3-section" style="text-align: left;">
+                                    <label>Name</label>
+                                    <input id="clientname" class="w3-input" type="text" name="Name" placeholder="Write your Name"
+                                        required>
+                                </div>
+                                <div class="w3-section" style="text-align: left;">
+                                    <label>Email</label>
+                                    <input id="name" class="w3-input" type="text" name="Email" placeholder="Write your Email"
+                                        required>
+                                </div>
+                                
+                                <a href="javascript:void(0)" class="w3-button w3-right w3-theme"
+                				onclick="document.getElementById('newsletter3').style.display='block'"><b>訂閱</b></a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- 插入資訊 -->
+                <div id="dp" class="w3-section" style="text-align: left;"></div>
+                <!-- 插入資訊 -->
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Modal -->
+    <!-- Newsletter Modal 2-->
+    <div id="newsletter2" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+                <i onclick="document.getElementById('newsletter2').style.display='none'"
+                    class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <!-- Contact Container -->
+                <div class="w3-container w3-padding-16 w3-theme-l5" id="contact">
+                    <div class="w3-row">
+                        <div class="w3-col m20">
+                            <form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+                                <h3 class="display-15">銀飾小批量加工訂製</h3>
+                                <!-- Nav tabs -->
+  								<ul class="nav nav-tabs" role="tablist">
+  								  <li class="nav-item">
+  								    <a class="nav-link active" data-toggle="tab" href="#menu0">產品資訊</a>
+  								  </li>
+  								  <li class="nav-item">
+ 								     <a class="nav-link" data-toggle="tab" href="#menu1">購買須知</a>
+  								  </li>
+  								  <li class="nav-item">
+ 								     <a class="nav-link" data-toggle="tab" href="#menu2">運送說明</a>
+ 								   </li>
+ 								 </ul>
+ 								 <!-- Nav tabs -->
+ 								 <!-- Tab panes -->
+								  <div class="tab-content">
+								    <div id="menu0" class="container tab-pane active"><br>
+								      <p class="text-muted">加值服務</p>
+								      <p>ーーーーーーーーーーーーーーーーーーーーーーーー</p>
+								      <h3 class="text-muted"><b>定價就是售價，不參與會員優惠</b></h3>
+								      <h3 class="text-danger"><b>**客製商品**<br>**不支持任何的退換貨**</b></h3>
+								      <p>ーーーーーーーーーーーーーーーーーーーーーーーー</p>
+								    </div>
+								    <div id="menu1" class="container tab-pane fade"><br>
+								    <h4>購物須知</h4>
+								      <p>
+								      1. 飾品大多為師傅手工製作，存在手作痕跡、模具痕跡，無100%完美，產品尺寸重量也是手工測量，存在誤差屬於正常現象。
+								      </p>
+								      <p><b>
+								      2. 發貨為批發式的OPP袋包裝，常見的摩擦痕跡、珍珠小劃痕、膠水痕跡等不影響佩戴都不屬於品質問題，是默認存在的!
+								      </b></p>
+								      <p>
+								      3. 飾品與髮飾會使用合金材質，合金是會氧化變色的，無法避免的，請注意存放和保養!
+								      </p>
+								      <p>
+								      4. 工廠出貨量大，偶有錯發/少發的狀況，如遇此狀況，請聯繫客服，我們默認處理方式是退等值禮物卡，不補發商品。
+								      </p>
+								      <h4>關於色差</h4>
+								      <p>
+								      1. 所有商品圖片均為實物拍攝
+								      </p>
+								      <p>
+								      2. 受自然光、室內燈光與環境影響，產品的顏色、亮度、明度及飽和度會有些許差異，例如透明材質、金屬材質、反光材質
+								      </p>
+								      <p>
+								      3. 各種顯示器的色彩偏差，個人對顏色的理解不同，可能會導致顏色認知差異
+								      </p>
+								      <p><b>
+								      4. 不同批次產品色差說明，其批次配方及當時生產溫度都會影響顏色，顏色、大小與彈性的誤差值在±3cm屬國際標準範圍，請知悉。
+								      <br>因 此 請您以收到的商品實物為准喲!
+								      </b></p>
+								      <p>
+								      下單默認接受以上事項，請理性購物， 買賣自由，互相尊重，感謝理解，祝生活愉快!
+								      </p>
+								    </div>
+								    <div id="menu2" class="container tab-pane fade"><br>
+								      <p>
+								      工廠48H發貨，臨時缺貨另行通知<br>
+								      <b>■多廠集運發貨</b><br>
+								      不限購買廠別與件數，出貨同一個地址，運費均一價<br>
+								      中國 ✈ 台灣本島: NT$150元<br>
+								      中國 ✈ 台灣外島: NT$200元<br>
+								      <b>■超商取貨</b><br>
+								      不限購買廠別與件數，7-11或全家超取，運費均一價<br>
+								      中國 ✈ 台灣本島/台灣外島: NT$170元<br>
+								      <b>■香港/馬來西亞用戶</b><br>
+								      不限購買廠別與件數，出貨同一個地址，運費均一價<br>
+								      中國 ✈ 香港: NT$160元<br>
+								      中國 ✈ 西馬: NT$250元<br>
+								      中國 ✈ 東馬: NT$500元<br>
+								      更多詳細信息請見➯"運送政策"<br>
+								      </p>
+								    </div>
+								  </div>
+								  <!-- Tab panes -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Modal 2-->
+    <!-- Newsletter Modal 3-->
+    <div id="newsletter3" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+                <i onclick="document.getElementById('newsletter3').style.display='none'"
+                    class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <!-- Contact Container -->
+                <div class="w3-container w3-padding-16 w3-theme-l5" id="contact">
+                    <div class="w3-row">
+                        <div class="w3-col m20">
+                            <form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+                                <h3 class="display-15">是否確定訂閱 ?</h3>
+                				<button type="button" class="w3-button w3-center w3-theme" id="btn"><b>確定</b></button>
+                				
+                				<!-- 插入資訊 -->
+                				<div id="display" class="w3-section" style="text-align: left;"></div>
+                				<!-- 插入資訊 -->
+                				
+                                <p></p><br>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Modal 3-->
+	<!-- Newsletter Modal A-->
+    <div id="newsletterA" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+  				<h3 class="display-15">A廠-日韓風格飾品</h3>
+            <button type="button" class="w3-button w3-left w3-theme btn-lg w3-blue" id="item1"><b>加入購物車</b></button>
+                <i onclick="document.getElementById('newsletterA').style.display='none'"
+                    class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <!-- Contact Container -->
+                <div class="w3-container w3-padding-16 w3-theme-l5" id="contact">
+                    <div class="w3-row">
+                        <div class="w3-col m20">
+                        	<form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+<!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#home2">產品圖片</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menu12">產品資訊</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+    <div id="home2" class="container tab-pane active"><br>
+      <h3>Heart Earrings</h3>
+      <p>A廠-很小很精緻！ 925銀針鍍14K小巧迷你秀氣幾何心形耳釘氣質耳飾耳環「C-275」</p>
+      <p>售價 NT$ 108</p>
+      <img src="images/A_1.webp" alt="A" width="100%">
+      <img src="images/A_2.webp" alt="A" width="100%">
+      <img src="images/A_3.webp" alt="A" width="100%">
+      <img src="images/A_4.webp" alt="A" width="100%">
+    </div>
+    <div id="menu12" class="container tab-pane fade"><br>
+		<h5 class="text-muted">A廠 - 日韓館</h5>
+		<p>ーーーーーーーーーーーーーーーーーー</p>
+		<p class="text-muted">採用925銀耳針，造型為銅材質電鍍產品尺寸：全長1.7厘米左右  直徑0.5厘米左右</p>
+		<p>ーーーーーーーーーーーーーーーーーー</p>
+		<h4>購物須知</h4>
+								      <p>
+								      1. 飾品大多為師傅手工製作，存在手作痕跡、模具痕跡，無100%完美，產品尺寸重量也是手工測量，存在誤差屬於正常現象。
+								      </p>
+
+								      <p><b>
+								      2. 發貨為批發式的OPP袋包裝，常見的摩擦痕跡、珍珠小劃痕、膠水痕跡等不影響佩戴都不屬於品質問題，是默認存在的!
+								      </b></p>
+								      <p>
+								      3. 飾品與髮飾會使用合金材質，合金是會氧化變色的，無法避免的，請注意存放和保養!
+								      </p>
+								      <p>
+								      4. 工廠出貨量大，偶有錯發/少發的狀況，如遇此狀況，請聯繫客服，我們默認處理方式是退等值禮物卡，不補發商品。
+								      </p>
+								      <h4>關於色差</h4>
+								      <p>
+								      1. 所有商品圖片均為實物拍攝
+								      </p>
+								      <p>
+								      2. 受自然光、室內燈光與環境影響，產品的顏色、亮度、明度及飽和度會有些許差異，例如透明材質、金屬材質、反光材質
+								      </p>
+								      <p>
+								      3. 各種顯示器的色彩偏差，個人對顏色的理解不同，可能會導致顏色認知差異
+								      </p>
+								      <p><b>
+								      4. 不同批次產品色差說明，其批次配方及當時生產溫度都會影響顏色，顏色、大小與彈性的誤差值在±3cm屬國際標準範圍，請知悉。
+								      <br>因 此 請您以收到的商品實物為准喲!
+								      </b></p>
+    </div>
+  </div>
+  </form>
+  <!-- Nav tabs -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Container -->
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Modal A-->
+    <!-- Newsletter Modal B-->
+    <div id="newsletterB" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+  				<h3 class="display-15">B廠-歐美鈦鋼飾品</h3>
+            <button type="button" class="w3-button w3-left w3-theme btn-lg w3-blue" id="item2"><b>加入購物車</b></button>
+                <i onclick="document.getElementById('newsletterB').style.display='none'"
+                    class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <!-- Contact Container -->
+                <div class="w3-container w3-padding-16 w3-theme-l5" id="contact">
+                    <div class="w3-row">
+                        <div class="w3-col m20">
+                        	<form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+<!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#homeB">產品圖片</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menuB">產品資訊</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+    <div id="homeB" class="container tab-pane active"><br>
+      <h3>Handmade Ring</h3>
+      <p>B廠-韓潮時尚百搭花紋細款手工戒指 鈦鋼鍍18K真金素圈指環首飾 「A091」</p>
+      <p>售價 NT$ 76</p>
+      <img src="images/B_1.jpg" alt="B" width="100%">
+      <img src="images/B_2.jpg" alt="B" width="100%">
+      <img src="images/B_3.jpg" alt="B" width="100%">
+      <img src="images/B_4.jpg" alt="B" width="100%">
+    </div>
+    <div id="menuB" class="container tab-pane fade"><br>
+		<h5 class="text-muted">B廠 -歐美風館</h5>
+		<p>ーーーーーーーーーーーーーーーーーー</p>
+		<p class="text-muted">優質環保鈦鋼材質 鈦鋼材質就是台灣稱呼的不鏽鋼 主要運用在知名手錶和名貴鋼筆上的材質 特性 不易過敏、變型、氧化退色及質感佳 *避免與即硬物質產生摩擦，就能長久保持原色</p>
+		<p>ーーーーーーーーーーーーーーーーーー</p>
+		<h4>購物須知</h4>
+								      <p>
+								      1. 飾品大多為師傅手工製作，存在手作痕跡、模具痕跡，無100%完美，產品尺寸重量也是手工測量，存在誤差屬於正常現象。
+								      </p>
+
+								      <p><b>
+								      2. 發貨為批發式的OPP袋包裝，常見的摩擦痕跡、珍珠小劃痕、膠水痕跡等不影響佩戴都不屬於品質問題，是默認存在的!
+								      </b></p>
+								      <p>
+								      3. 飾品與髮飾會使用合金材質，合金是會氧化變色的，無法避免的，請注意存放和保養!
+								      </p>
+								      <p>
+								      4. 工廠出貨量大，偶有錯發/少發的狀況，如遇此狀況，請聯繫客服，我們默認處理方式是退等值禮物卡，不補發商品。
+								      </p>
+								      <h4>關於色差</h4>
+								      <p>
+								      1. 所有商品圖片均為實物拍攝
+								      </p>
+								      <p>
+								      2. 受自然光、室內燈光與環境影響，產品的顏色、亮度、明度及飽和度會有些許差異，例如透明材質、金屬材質、反光材質
+								      </p>
+								      <p>
+								      3. 各種顯示器的色彩偏差，個人對顏色的理解不同，可能會導致顏色認知差異
+								      </p>
+								      <p><b>
+								      4. 不同批次產品色差說明，其批次配方及當時生產溫度都會影響顏色，顏色、大小與彈性的誤差值在±3cm屬國際標準範圍，請知悉。
+								      <br>因 此 請您以收到的商品實物為准喲!
+								      </b></p>
+    </div>
+  </div>
+  </form>
+  <!-- Nav tabs -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Container -->
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Modal B-->
+    <!-- Newsletter Modal C-->
+    <div id="newsletterC" class="w3-modal">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="w3-container w3-white w3-center">
+  				<h3 class="display-15">C廠-S925韓系銀飾</h3>
+            <button type="button" class="w3-button w3-left w3-theme btn-lg w3-blue" id="item3"><b>加入購物車</b></button>
+                <i onclick="document.getElementById('newsletterC').style.display='none'"
+                    class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+                <!-- Contact Container -->
+                <div class="w3-container w3-padding-16 w3-theme-l5" id="contact">
+                    <div class="w3-row">
+                        <div class="w3-col m20">
+                        	<form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+<!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="tab" href="#homeC">產品圖片</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="tab" href="#menuC">產品資訊</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+  <form class="w3-container w3-card-4 w3-padding-16 w3-white" target="_blank">
+    <div id="homeC" class="container tab-pane active"><br>
+      <h3>Diamond Earrings</h3>
+      <p>C廠- 小眾個性鋯石鏈條耳釘女簡約設計韓版時尚高級感925純銀IG潮飾品「EH-772」</p>
+      <p>售價 NT$ 200</p>
+      <img src="images/C_1.jpg" alt="C" width="100%">
+      <img src="images/C_2.webp" alt="C" width="100%">
+      <img src="images/C_3.webp" alt="C" width="100%">
+      <img src="images/C_4.webp" alt="C" width="100%">
+    </div>
+    <div id="menuC" class="container tab-pane fade"><br>
+		<h5 class="text-muted">C廠 - 韓系銀飾館</h5>
+		<p>ーーーーーーーーーーーーーーーーーー</p>
+		<p class="text-muted">■採用925銀材質 ■產品尺寸：約3＊16mm ■重量：約0.60g</p>
+		<p>ーーーーーーーーーーーーーーーーーー</p>
+		<h4>購物須知</h4>
+								      <p>
+								      1. 飾品大多為師傅手工製作，存在手作痕跡、模具痕跡，無100%完美，產品尺寸重量也是手工測量，存在誤差屬於正常現象。
+								      </p>
+
+								      <p><b>
+								      2. 發貨為批發式的OPP袋包裝，常見的摩擦痕跡、珍珠小劃痕、膠水痕跡等不影響佩戴都不屬於品質問題，是默認存在的!
+								      </b></p>
+								      <p>
+								      3. 飾品與髮飾會使用合金材質，合金是會氧化變色的，無法避免的，請注意存放和保養!
+								      </p>
+								      <p>
+								      4. 工廠出貨量大，偶有錯發/少發的狀況，如遇此狀況，請聯繫客服，我們默認處理方式是退等值禮物卡，不補發商品。
+								      </p>
+								      <h4>關於色差</h4>
+								      <p>
+								      1. 所有商品圖片均為實物拍攝
+								      </p>
+								      <p>
+								      2. 受自然光、室內燈光與環境影響，產品的顏色、亮度、明度及飽和度會有些許差異，例如透明材質、金屬材質、反光材質
+								      </p>
+								      <p>
+								      3. 各種顯示器的色彩偏差，個人對顏色的理解不同，可能會導致顏色認知差異
+								      </p>
+								      <p><b>
+								      4. 不同批次產品色差說明，其批次配方及當時生產溫度都會影響顏色，顏色、大小與彈性的誤差值在±3cm屬國際標準範圍，請知悉。
+								      <br>因 此 請您以收到的商品實物為准喲!
+								      </b></p>
+    </div>
+  </div>
+  </form>
+  <!-- Nav tabs -->
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Container -->
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter Modal C-->
+    
+    <!-- Newsletter Modal -->
+    <div id="newsletterAAA" class="w3-modal w3-card-4 w3-padding-16 " target="_blank">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;"> 
+                <!-- Contact Container -->
+                <!-- Modal content-->
+                <h3 class="display-15">登入</h3>
+                <i onclick="document.getElementById('newsletterAAA').style.display='none'"
+                        class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <form class="w3-container" target="_blank">
+              <div class="form-group">
+                <label> 帳號/電子郵件</label>
+                <input type="text" class="form-control" id="usrname" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <label> 密碼</label>
+                <input type="text" class="form-control" id="psw" placeholder="Enter Password">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>記住帳號密碼</label>
+              </div>
+                <button type="button" class="btn btn-dark btn-block">登入</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>還沒註冊會員? <a href="signUp">註冊</a></p>
+          </div>
+        </div>
+        <!-- Modal content-->
+                <!-- Contact Container -->
+        </div>
+    </div>
+    <!-- Newsletter Modal --> 
+    
+    
+    
+    
+    	
+    <script>
+ // Open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+    
+      function rs(data){
+          $("#display").html(data);
+        }
+      function r(data){
+        $("#dp").html(data);
+      }
+      function send(evt){
+      	   evt.preventDefault();
+      	   var n=$("#clientname").val();
+      	   var v=$("#name").val();
+      	   if(n=="" || n==null && v=="" || v==null)
+      		 alert("請輸入 Name、Email 感謝 !!");
+      	   else if(n=="" || n==null)
+          	   alert("請輸入 Name 感謝 !!");
+      	   else if(v=="" || v==null)
+      		   alert("請輸入 Email 感謝 !!");
+      	   else{
+             $.post("showclient",{"clientname":n,"name":v},rs);
+          	   }
+         }
+      function se(evt){
+   	   evt.preventDefault();
+   	   $.post("show",r);
+      }
+      function addsoon(data){
+    		if(data==123){
+    			alert('請先登入，才可繼續購物');
+    			location.href="http://localhost:8080/login";}
+    		else{
+    		alert('成功加入購物車');}
+    	}
+
+
+  	function item1(e){
+  		e.preventDefault();		
+  		$.post("AddToCar",{"ProductName":"AnpingBeautyHeartTarrings"},addsoon);
+  	}
+  	function item2(e){
+  		e.preventDefault();	
+  		$.post("AddToCar",{"ProductName":"AnpingBeautyHandmadeRing"},addsoon);
+  	}
+  	function item3(e){
+  		e.preventDefault();	
+  		$.post("AddToCar",{"ProductName":"AnpingBeautyDiamondEarrings"},addsoon);
+  	}
+      function start(){
+   	   $("#btn").click(send);
+   	   $("#btn").click(se);
+   	   $("#item1").click(item1);
+	   $("#item2").click(item2);
+	   $("#item3").click(item3);
+      }
+      $(document).ready(start);
+
+    </script>
+    
+</body>
+</html>

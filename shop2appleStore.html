@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BigBuy Online Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--以下為bootstrap和jquery-->
+<link
+rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--以下是購物車icon的圖示-->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link rel="icon" href="/images/logo.png" />
+<!--以下是icon的js-->
+<script
+src="https://kit.fontawesome.com/fe5bb6f718.js"
+crossorigin="anonymous"
+></script>
+<style>
+ * {
+        padding: 0;
+        margin: 0;
+        font-family: "Noto Sans TC", sans-serif;
+      }
+ h1, h2, h3, h4, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  }
+
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:none;
+  }
+</style>
+</head>
+<body>
+  <nav class="w3-top">
+    <div class="w3-bar w3-light-grey w3-card">
+      <img src="/images/logo.png" alt="LOGO" style="width: 75px;" class="w3-bar-item w3-padding-large">
+      <a href="index" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <a href="makeup" class="w3-bar-item w3-button w3-padding-large">美妝保養</a>
+            <a href="appleStore" class="w3-bar-item w3-button w3-padding-large">好吃蘋果</a>
+            <a href="client" class="w3-bar-item w3-button w3-padding-large">精品手飾</a>
+            <a href="computerweb" class="w3-bar-item w3-button w3-padding-large">商務筆電</a>
+            <a href="myhomebody" class="w3-bar-item w3-button w3-padding-large">優良小物</a>
+            <a href="hMProducts" class="w3-bar-item w3-button w3-padding-large">工學座椅</a>
+            <!-- 
+            <a href="javascript:void(0)" class="w3-padding-large w3-button w3-right"
+                onclick="document.getElementById('newsletter').style.display='block'">
+                <i class="fa-regular fa-user"></i></a>
+                 -->
+            <a href="member" class="w3-padding-large w3-button w3-right">
+                <i class="fa-regular fa-user"></i></i></a>
+            <a href="shopcar" class="w3-padding-large w3-button w3-right">
+                <i class="fa-solid fa-cart-shopping"></i></a>
+                  <span class="w3-right w3-padding-large" th:text="${member.username}"></span>
+    </div>
+ 
+  <div class="w3-display-container">
+   <div>
+     <div class="w3-bar w3-white w3-card" style="letter-spacing:4px;">
+       <!-- Right-sided navbar links. Hide them on small screens -->
+       <div class="w3-right">
+        <a href="#product1" class="w3-bar-item w3-button">iPhone14</a>
+        <a href="#product2" class="w3-bar-item w3-button">iPad</a>
+        <a href="#product3" class="w3-bar-item w3-button">MacBookair</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+
+
+   <!-- Page content -->
+   <div class="w3-content" style="max-width:1100px">
+     <!-- 產品1 Section -->
+      
+     <div class="w3-row w3-padding-64" id="product1">
+      <br><br>  
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+       <img src="images/iphone14.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+      </div>
+
+     <div class="w3-col m6 w3-padding-large">
+       <h1 class="w3-center">iPhone 14 128GB 6.1</h1><br>
+       <h5 class="w3-center">NT$ 27,900</h5>
+       <p class="w3-large">顯示器的圓角具有優美的曲線設計，並呈現在一個標準矩形之內。以標準矩形量測時，螢幕的對角線長度為 5.42 吋 (iPhone 13 mini)、6.06 吋 (iPhone 14, iPhone 13, iPhone 12)、6.12 吋 (iPhone 14 Pro)、6.68 吋 (iPhone 14 Plus) 或 6.69 吋 (iPhone 14 Pro Max)。實際可視區較小。 </p>
+       <p class="w3-large w3-text-grey w3-hide-medium">動態島功能，靈活多變的 iPhone 新玩法。 4800 萬像素主相機，配備先進的四合一像素感光元件，解析度最高可達 4 倍。 A16 仿生晶片，超飆速、超高能效，讓電池續航力滿足一天所需。  </p>
+       <p class="w3-large">HDR 顯示, 原彩顯示, 廣色域 (P3), 觸覺回饋觸控, 2,000,000:1 對比度 (標準), 800 尼特最大亮度 (標準); 1200 尼特峰值亮度 (HDR), 防指印疏油外膜, 支援同時顯示多種語言文字 </p>
+       <br>
+           <h4 class="w3-left"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item1">加入購物車</button></a></h4>
+      </div>
+      
+    </div>
+        <hr>
+      
+    <!-- 產品2 Section -->
+    <div class="w3-row w3-padding-64" id="product2">
+      <br><br>
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-center">iPad air5 64GB 10.9""</h1><br>
+        <h5 class="w3-center">NT$ 20,881</h5>
+        <p class="w3-large">Apple M1 晶片 ,8 核心  CPU 配備 4 個效能核心與 4 個節能核心, 16 核心神經網路引擎, 8GB RAM, 媒體引擎, 硬體加速 H.264 與 HEVC, 影片解碼引擎</p>
+        <p class="w3-large w3-text-grey w3-hide-medium">Liquid Retina 顯示器, 10.9 吋 (對角線) LED 背光多點觸控顯示器，採用 IPS 技術, 2360 x 1640 解析度，每吋 264 像素 (ppi), 廣色域顯示 (P3), 原彩顯示, 防指印疏油外膜, 全平面貼合顯示, 抗反射鍍膜, 1.8% 反射率, 500 尼特亮度, 支援 Apple Pencil (第 2 代) </p>
+        <p class="w3-large">同時使用多款 App:還能來回切換工作。iPad 的多工處理比以往更強大、更直覺易用。你能輕鬆在多個 app 間順暢切換工作。利用「滑動置前」或「分割顯示」即可同時使用多款 app，甚至還能藉由觸控或觸控式軌跡板在 app 之間拖放內容。在 iPad Air 與 iPad Pro 上，你可以使用「幕前調度」將各個 app 重疊、堆疊排列，或調整視窗大小</p>
+        <br><br><br><br>
+          <h4 class="w3-left"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item2">加入購物車</button></a></h4>
+      </div>
+  
+      <div class="w3-col l6 w3-padding-large">
+        <img src="images/iPadair.jpeg" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+     
+      </div>
+
+    </div>
+      <hr>
+
+   <!-- 產品3 Section -->
+   <div class="w3-row w3-padding-64" id="product3">
+    <br><br>
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <img src="images/macbookair.png" class="w3-round w3-image w3-opacity-min" alt="Table Setting" width="600" height="750">
+   </div>
+
+  <div class="w3-col m6 w3-padding-large">
+     <h1 class="w3-center">MacBook air M2 16G 1TB</h1><br>
+     <h5 class="w3-center">NT$ 43,000</h5>
+      <p class="w3-large">Apple M2 晶片, 8 核心 CPU 配備 4 個效能核心與 4 個節能核心, 16 核心神經網路引擎, 100GB/s 記憶體頻寬, 媒體引擎, 硬體加速 H.264、HEVC、ProRes 與 ProRes RAW, 影片編碼引擎, ProRes 編碼與解碼引擎</p>
+      <p class="w3-large w3-text-grey w3-hide-medium">13.6 吋 (對角線) LED 背光顯示器，採用 IPS 技術1, 2560 x 1664 原生解析度，每吋 224 像素，, 支援 10 億種顏色, 500 尼特亮度, 廣色域 (P3), 原彩顯示技術 </p>
+      <p class="w3-large">學起來容易，用起來出奇強大，電池續航力更出乎意料的持久；Mac 精心設計，不論工作、娛樂和創作都能讓你盡情發揮，超乎想像。它滿載眾多 app，開箱就能用，更提供免額外付費、定期的軟體更新，讓一切保持最新狀態，順暢執行。如果你有 iPhone，從打開電腦的那一刻起，自然生起一種熟悉的親切感。 </p>   
+      <br><br>
+      <h4 class="w3-left"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item3">加入購物車</button></a></h4>
+   </div>
+
+ 
+ </div>
+</div>
+<!-- Footer -->
+    <div class="w3-light-grey w3-center bottom w3-row-padding">
+        <h5>copyright ⓒ 2022 BigBuy Inc. All Rights Reserved.</h5>
+    </div>
+    
+    <!-- Newsletter Modal -->
+    <div id="newsletter" class="w3-modal w3-card-4 w3-padding-16 " target="_blank">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;"> 
+                <!-- Contact Container -->
+                <!-- Modal content-->
+                <h3 class="display-15">登入</h3>
+                <i onclick="document.getElementById('newsletter').style.display='none'"
+                        class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <form class="w3-container" target="_blank">
+              <div class="form-group">
+                <label> 帳號/電子郵件</label>
+                <input type="text" class="form-control" id="usrname" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <label> 密碼</label>
+                <input type="text" class="form-control" id="psw" placeholder="Enter Password">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>記住帳號密碼</label>
+              </div>
+                <button type="button" class="btn btn-dark btn-block">登入</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>還沒註冊會員? <a href="signUp">註冊</a></p>
+          </div>
+        </div>
+        <!-- Modal content-->
+                <!-- Contact Container -->
+        </div>
+    </div>
+    <!-- Newsletter Modal -->
+    
+            <script>
+            function addsoon(data){
+            	if(data==123){
+            		alert('請先登入，才可繼續購物');
+            		location.href="http://localhost:8080/login";}
+            	else{
+            	alert('成功加入購物車');}
+            }
+
+
+function item1(e){
+	e.preventDefault();		
+	$.post("AddToCar",{"ProductName":"iPhone14-128GB-6.1"},addsoon);
+}
+function item2(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"iPad Air5-64GB-10.9"},addsoon);
+}
+function item3(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"MacBookAir-M2-16G-1TB"},addsoon);
+}
+
+function start(){
+	   $("#item1").click(item1);
+	   $("#item2").click(item2);
+	   $("#item3").click(item3);
+	   	  
+   }
+   $(document).ready(start);
+</script>
+</body>
+</html>

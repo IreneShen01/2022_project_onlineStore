@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>BigBuy Online Store</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!--以下為bootstrap和jquery-->
+<link
+rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<!--以下是購物車icon的圖示-->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link rel="icon" href="/images/logo.png" />
+<!--以下是icon的js-->
+<script
+src="https://kit.fontawesome.com/fe5bb6f718.js"
+crossorigin="anonymous"
+></script>
+<style>
+ * {
+        padding: 0;
+        margin: 0;
+        font-family: "Noto Sans TC", sans-serif;
+      }
+ h1, h2, h3, h4, h6 {
+  font-family: "Playfair Display";
+  letter-spacing: 5px;
+  }
+
+a{
+  text-decoration:none;
+}
+a:hover{
+  text-decoration:none;
+  }
+</style>
+</head>
+<body>
+  <nav class="w3-top">
+    <div class="w3-bar w3-light-grey w3-card">
+      <img src="/images/logo.png" alt="LOGO" style="width: 75px;" class="w3-bar-item w3-padding-large">
+      <a href="index" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <a href="makeup" class="w3-bar-item w3-button w3-padding-large">美妝保養</a>
+            <a href="appleStore" class="w3-bar-item w3-button w3-padding-large">好吃蘋果</a>
+            <a href="client" class="w3-bar-item w3-button w3-padding-large">精品手飾</a>
+            <a href="computerweb" class="w3-bar-item w3-button w3-padding-large">商務筆電</a>
+            <a href="myhomebody" class="w3-bar-item w3-button w3-padding-large">優良小物</a>
+            <a href="hMProducts" class="w3-bar-item w3-button w3-padding-large">工學座椅</a>
+            <!-- 
+            <a href="javascript:void(0)" class="w3-padding-large w3-button w3-right"
+                onclick="document.getElementById('newsletter').style.display='block'">
+                <i class="fa-regular fa-user"></i></a>
+                 -->
+            <a href="member" class="w3-padding-large w3-button w3-right">
+                <i class="fa-regular fa-user"></i></i></a>
+            <a href="shopcar" class="w3-padding-large w3-button w3-right">
+                <i class="fa-solid fa-cart-shopping"></i></a>
+                  <span class="w3-right w3-padding-large" th:text="${member.username}"></span>
+    </div>
+ 
+  <div class="w3-display-container">
+   <div>
+     <div class="w3-bar w3-white w3-card" style="letter-spacing:4px;">
+       <!-- Right-sided navbar links. Hide them on small screens -->
+       <div class="w3-right">
+         <a href="#product1" class="w3-bar-item w3-button">Rose Antioxidant Mist 150ml</a>
+         <a href="#product2" class="w3-bar-item w3-button" >Powder Foundation 30ml</a>
+         <a href="#product3" class="w3-bar-item w3-button">Face Essence 160ml</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+
+
+   <!-- Page content -->
+   <div class="w3-content" style="max-width:1100px">
+     <!-- 產品1 Section -->
+     <div class="w3-row w3-padding-64" id="product1">
+        <div class="w3-col m6 w3-padding-large">
+         <img src="/images/beautyou_1-01.png" class="w3-round w3-image" alt="Table Setting" width="600">
+        </div>
+       <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-padding-large"></h1>
+         <h3 class="w3-center">【beautYou】<br>Rose Antioxidant Mist 150ml</h3>
+         <h4 class="w3-center">$480</h4>
+         <p class="w3-large" style="text-align: justify">It is enriched with antioxidants and frees the skin from excess sebum. This organic and vegan rose water is obtained through steam distilling Bulgarian roses. Only the best and freshest roses are used. The soothing and antibacterial effects of roses have a positive influence on acne and skin impurities. This pure, soothing and hydrating water that firms and strengthens the skin. For instant freshness and clear pores. Skin that is acne-prone to kept clean throughout the day thanks to the antibacterial properties. Vitamin B3 counteracts redness and calms the skin. Skin inflammation and impurities are prevented. </p>
+        <h4 class="w3-center"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item1">加入購物車</button></a></h4>
+        </div>
+        </div>
+        <hr>
+      
+    <!-- 產品2 Section -->
+    <div class="w3-row w3-padding-64" id="product2">
+      <div class="w3-col m6 w3-padding-large">
+        <h1 class="w3-padding-large"></h1>
+        <h3 class="w3-center">【beautYou】<br>Powder Foundation 30ml </h3>
+        <h4 class="w3-center">$790</h4>
+        <p class="w3-large" style="text-align: justify">A full coverage, Anti-Aging hydrating powder foundation that truly gives you the power to achieve flawless, airbrushed complexion perfection in no time! Delivers highly pigmented perfect coverage that will never crease or crack and is designed to not only cover, but to make you skin appear younger at the same time. The Anti-Aging technology in this formula blurs away pores, fines lines and imperfections giving you a flawless airbrush finish that looks and feels like silk. It absorbs oil and shine, without settling into lines and wrinkles.</p>
+         <h4 class="w3-center"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item2">加入購物車</button></a></h4>
+       </div>
+
+      <div class="w3-col m6 w3-padding-large">
+       <img src="/images/beautyou_2.png" class="w3-round w3-image" alt="Table Setting" width="600">
+      </div>
+      </div>
+      <hr>
+
+   <!-- 產品3 Section -->
+   <div class="w3-row w3-padding-64" id="product3">
+    <div class="w3-col m6 w3-padding-large">
+     <img src="/images/beautyou_3_1.png" class="w3-round w3-image" alt="Table Setting" width="600">
+    </div>
+    
+
+   <div class="w3-col m6 w3-padding-large">
+    <h1 class="w3-padding-large"></h1>
+     <h3 class="w3-center">【beautYou】<br>Face Essence 160ml</h3>
+     <h4 class="w3-center">$590</h4>
+     <p class="w3-large" style="text-align: justify">If you want to start your essence journey with a less "traditional" product that you can layer underneath or over makeup, beautYou Face Essence is the versatile treatment your skin will love. This lightweight Essence blankets skin with a superfine layer of phytic acid (an alpha hydroxy acid or AHA found in Japanese rice) cardamom, coconut, rose flower, and grapefruit peel oils to moisturize, even tone, and boost elasticity. An essential essence in clear liquid form helps make your skin hydrated, clear and translucent.</p>
+     
+     <div class="w3-display-container">
+     <h4 class="w3-center"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item3">加入購物車</button></a></h4>
+    </div>
+    </div>
+  </div>
+</div>
+<!-- Footer -->
+    <div class="w3-light-grey w3-center bottom w3-row-padding">
+        <h5>copyright ⓒ 2022 BigBuy Inc. All Rights Reserved.</h5>
+    </div>
+    
+    <!-- Newsletter Modal -->
+    <div id="newsletter" class="w3-modal w3-card-4 w3-padding-16 " target="_blank">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;"> 
+                <!-- Contact Container -->
+                <!-- Modal content-->
+                <h3 class="display-15">登入</h3>
+                <i onclick="document.getElementById('newsletter').style.display='none'"
+                        class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <form class="w3-container" target="_blank">
+              <div class="form-group">
+                <label> 帳號/電子郵件</label>
+                <input type="text" class="form-control" id="usrname" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <label> 密碼</label>
+                <input type="text" class="form-control" id="psw" placeholder="Enter Password">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>記住帳號密碼</label>
+              </div>
+                <button type="button" class="btn btn-dark btn-block">登入</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>還沒註冊會員? <a href="signUp">註冊</a></p>
+          </div>
+        </div>
+        <!-- Modal content-->
+                <!-- Contact Container -->
+        </div>
+    </div>
+    <!-- Newsletter Modal -->
+        <script>
+function addsoon(data){
+	if(data==123){
+		alert('請先登入，才可繼續購物');
+		location.href="http://localhost:8080/login";}
+	else{
+	alert('成功加入購物車');}
+}
+
+function item1(e){
+	e.preventDefault();		
+	$.post("AddToCar",{"ProductName":"RoseAntioxidantMist"},addsoon);
+}
+function item2(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"PowderFoundation"},addsoon);
+}
+function item3(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"FaceEssence160ml"},addsoon);
+}
+
+function start(){
+	   $("#item1").click(item1);
+	   $("#item2").click(item2);
+	   $("#item3").click(item3);
+	   	  
+   }
+   $(document).ready(start);
+</script>
+</body>
+</html>

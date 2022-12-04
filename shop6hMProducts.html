@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Herman Miller</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+<script
+      src="https://kit.fontawesome.com/fe5bb6f718.js"
+      crossorigin="anonymous"
+    ></script>
+    <!--以下是標題的圖示-->
+    <link rel="icon" href="/images/logo.png" />
+    <style>
+    
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: "Noto Sans TC", sans-serif;
+      }
+      </style>
+</head>
+<body>
+  <nav class="w3-top">
+    <div class="w3-bar w3-light-grey w3-card">
+      <img src="/images/logo.png" alt="LOGO" style="width: 75px" class="w3-bar-item w3-padding-large" />
+      <a href="index" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <a href="makeup" class="w3-bar-item w3-button w3-padding-large">美妝保養</a>
+            <a href="appleStore" class="w3-bar-item w3-button w3-padding-large">好吃蘋果</a>
+            <a href="client" class="w3-bar-item w3-button w3-padding-large">精品手飾</a>
+            <a href="computerweb" class="w3-bar-item w3-button w3-padding-large">商務筆電</a>
+            <a href="myhomebody" class="w3-bar-item w3-button w3-padding-large">優良小物</a>
+            <a href="hMProducts" class="w3-bar-item w3-button w3-padding-large">工學座椅</a>
+            <!-- 
+            <a href="javascript:void(0)" class="w3-padding-large w3-button w3-right"
+                onclick="document.getElementById('newsletter').style.display='block'">
+                <i class="fa-regular fa-user"></i></a>
+                 -->
+            <a href="member" class="w3-padding-large w3-button w3-right">
+                <i class="fa-regular fa-user"></i></i></a>
+            <a href="shopcar" class="w3-padding-large w3-button w3-right">
+                <i class="fa-solid fa-cart-shopping"></i></a>
+                  <span class="w3-right w3-padding-large" th:text="${member.username}"></span>
+    </div>
+  
+
+<!-- Navbar (sit on top) -->
+  <div class="w3-bar w3-white  w3-card" style="letter-spacing:4px;">
+    <a href="#home" class="w3-bar-item w3-button">Top</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right">
+      <a href="#embody" class="w3-bar-item w3-button">Embody</a>
+      <a href="#aeron" class="w3-bar-item w3-button">Aeron</a>
+      <a href="#sayl" class="w3-bar-item w3-button">Sayl</a>
+    </div>
+  </div>
+</nav>
+<br>
+
+
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img class="w3-image" src="images/Aeron-3.webp" alt="Architecture" width=100%>
+  <div class="w3-display-middle w3-margin-top w3-center">
+    <h1 class="w3-xxlarge w3-text-white"><img class="w3-image" src="images/hm-logo-caption.svg" width="80%"><p></p> 
+    <span class=" w3-hide-small w3-text-light-grey ">Beautiful and Useful</span></h1>
+  </div>
+</header>
+<div class="w3-content w3-padding" style="max-width:1540px">
+<h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">品牌簡介</h3>
+    <p>世界第一品牌Herman Miller在歷經十年的研究後，於1968年正式推出全世界第一款組合式屏風系統辦公家具(Action Office)，人們需要區隔工作的空間，也需要有插座來供電腦使用，所以有了第一款Action office的產生。因而開創了全新的辦公環境，掀起了辦公家具的改革風潮，迄今發表的系列商品及公司營運屢次獲得來自各方的獎賞殊榮並成為全球現代辦公家具製造廠商競相摹仿的對象。
+      在近代人類的發展中，工商的發達改變了人類的生活型態，工作成為人們生活中重要的一環，Herman Miller秉持提供使用者一個舒適、健康、安全辦公環境的經營哲學，透過不斷的研究、創新與改良，陸續推出一系列的辦公家具，創造了前所未有的高效率工作環境，更引導了新辦公型態的潮流。Herman Miller樹立了良好的典範，造福全球無以數計的組織和工作者。 </p>
+</div>
+      <!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- embody -->
+  <div class="w3-container w3-padding-64" id="embody">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Embody</h1><h2>智能設計—有利於就坐者思考</h2>
+    <p>Embody始於設計師發現了一個以前尚未解決的問題：人們與其使用的科技產品之間缺乏物理協調性。 現今人們長時間使用電子設備，手指以外的部位少有活動，而致使身體僵硬和疲憊。設計師Bill Stumpf和Jeff Weber決定通過Embody來解決這個問題。 </p>
+  </div>
+  <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <img src="images/Embody-3.jpg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+   </div>
+
+   <div class="w3-col m6 w3-padding-large">
+    <!--<h1 class="w3-center">Embody</h1><br>-->
+    <p class="w3-large">
+      <h2>看得見感受得到的功能</h2>
+      在Embody身上，形式不僅只為功能服務。功能亦需要完美的展現形式。座椅每個部件的設計都有專門的保健功用。Embody 的技術並不是隱形的，而是屬於其美感的一部分。 Embody座椅的技術就在您能看得到的地方，其功能是美學設計的一部分。從椅背上，您會看到這項技術；從前面，您看到的則是有機的造型與曲線。 
+      織物增添溫馨舒適感。與其說是一層覆蓋物，不如說更像是一層皮膚來的貼切；織物是為了增強效果，而不是為了掩飾瑕疵。它們的“閣樓結構（loft）”可帶來輕鬆舒適的感覺；讓光線和氣流輕鬆穿過， 從而保持身體涼爽。
+       </p>
+    <p class="w3-large">
+      <h2>全新標準</h2>
+      來自生物力學、視力、物理療法和人體工程學等領域的20多位醫生和博士，以其豐富的專業知識，為座椅研發予以指導。因此，在人體工程學技術座椅的壓力分散、 天然調節和對健康運動的支撐等方面，Embody 都堪稱標杆。
+      </p>
+      <p class="w3-large">
+      <h2>點陣式支撐</h2>
+      來在您坐下的那一刻，即會感到Embody的“點陣式支撐”，有助於減少就坐的壓力，保持血液循環順暢。同時，動態點陣設計讓Embody 的座椅和靠背， 能根據身體的微小動作自動進行調整，均勻地分佈您身體的重量。讓您自如活動，以促進健康循環和專注力。
+      </p>
+      <p class="w3-large"><h2>NT$ 62,250</h2></p>
+      
+</div>
+    
+ 
+ <div class="w3-display-container">
+   <img src="images/Embody-1.jpg" style="width: 100%" />
+   <div class="w3-display-bottommiddle w3-display-hover" >
+    
+     <button class="w3-button w3-black" >
+      加入購物車 <i class="fa fa-shopping-cart" id="item1"> </i>
+     </button>
+   </div>
+ </div>
+ <hr>
+
+<div class="w3-content w3-padding" style="max-width:1564px">
+  <!-- aeron -->
+  <div class="w3-container w3-padding-64" id="aeron">
+    <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Aeron</h1>
+    <h2>一款革命性創新的進化</h2>
+    <p>當Bill Stumpf和Don Chadwick設計Aeron的時候，他們將其對於以人為本的設計的深度理解和創新、 前所未有的技術結合在一起，創造出了一款如此與眾不同的座椅。而今重新製作的Aeron從人體工程學技術、 功能、人體測量學和環保等方面進行了改良，更適合當今的工作和用戶需求。 </p>
+    </div>
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+    <img src="images/Aeron-4.jpg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+     </div>
+  
+     <div class="w3-col m6 w3-padding-large">
+      <!--<h1 class="w3-center">Aeron</h1><br>-->
+      <p class="w3-large">
+        <h2>重新製作的AERON
+          經典設計與最新科技的結晶</h2>
+          當Aeron於1994年首度面世時，這款座椅如此與眾不同、前所未見。它不僅改變了人們就坐的方式，也改變了人們對於座椅的看法。但是，從那時候起世事不斷變遷，意味著Aeron也應該順時改變。那麼，我們該怎樣改進這款當今世上最具有標誌性也最受熱愛的座椅之一呢？ 我們重新招募了合作設計師Don Chadwick，在當今的工作和技術環境下重新檢視他和Bill Stumpf創作原型產品時採用的設計標準。採用更加結實、智能的材料、具有更好的調節性能、新型的網布面選項，以及更健康、更舒適的就坐體驗，我們並非重新創作或者重新設計了Aeron --- "我們只是利用最新的材料和技術重新製作了這款座椅”。
+          就像標誌性的膠片和相冊必須與時俱進來迎合新的受眾，重新製作的Aeron座椅是為了更好地滿足當今工作、從業者和工作環境的要求。結合了合作設計師Don Chadwick的願景以及Herman Miller有關就坐科學的最新研究成果， 重新製作的Aeron將前所未有的更加智能---"您當然也可以”。
+         </p>
+      <p class="w3-large">
+        <h2>滿足您在工作中的所有狀態</h2>
+        隨處辛勤工作，像您一樣對於坐在Aeron上的人來說,能夠適應多種姿態的設計意味著這把座椅能完全容納人們在工作中可能採用的所有姿勢和所有可能的活動。
+        </p>
+        <p class="w3-large">
+        <h2>傾仰自如，怡然自得</h2>
+        最新的傾仰機制能提供更加平穩順暢的傾仰軌跡和最佳的平衡點，讓人們能更好地掌控自己的活動區域，在整個傾仰範圍內收放自如。
+        </p>
+        <p class="w3-large"><h2>NT$54,750</h2></p>
+      
+      </div>  
+  
+   <div class="w3-display-container">
+     <img src="images/Aeron-2.jpg" style="width: 100%" />
+     <div class="w3-display-bottommiddle w3-display-hover" >
+       
+       <button class="w3-button w3-black"  id="item2">
+        加入購物車 <i class="fa fa-shopping-cart" > </i>
+       </button></a>
+     </div>
+   </div>
+   <hr>
+
+  
+  <!-- Sayl -->
+  <div class="w3-content w3-padding" style="max-width:1564px">
+    <!-- aeron -->
+    <div class="w3-container w3-padding-64" id="sayl">
+      <h1 class="w3-border-bottom w3-border-light-grey w3-padding-16">Sayl</h1>
+      <h2>美麗 優雅 尊重</h2>
+      <p>我們要求設計師Yves Béhar 設計一款經濟實惠的椅子，其中應包含Herman Miller 聞名的一切 ── 精美的設計， 一流的人體工程學、優雅的工程設計以及對環境的尊重。</p>
+      </div>
+      <div class="w3-col m6 w3-padding-large w3-hide-small">
+      <img src="images/Sayl-4.jpeg" class="w3-round w3-image" alt="Table Setting" width="600" height="750">
+       </div>
+    
+       <div class="w3-col m6 w3-padding-large">
+        <!--<h1 class="w3-center">Sayl</h1><br>-->
+        <p class="w3-large">
+          <h2>美學選擇</h2>
+          Sayl的無框架靠背和Y-Tower支撐結構創造出一種引人矚目的美學視覺效果，不僅實現了設計師的設計意圖，也充分展現了設計師的創作靈感。 彈性針織的靠背外罩給人帶來一種柔軟、溫暖的美學效果，同時又保持著Sayl標誌性的3D懸架支撐靠背的醒目美麗、良好支撐和透氣性能。
+           </p>
+        <p class="w3-large">
+          <h2>獨到之處</h2>
+          那為什麼取名叫“Sayl”而非“橋”呢？讓我們從側面來看看這款產品。它是不是看起來像一面張開的主帆？Sayl的含義就是一艘從橋下駛過的帆船， 而這座橋也就是這款產品的靈感來源。將單詞sail（帆）中的“i”替換成“y”是表示贊成工作椅的富有創新意義的Y型塔結構。
+          </p>
+          <p class="w3-large">
+          <h2>懸吊起來的座椅</h2>
+          最新的傾仰機制能提供更加平穩順暢的傾仰軌跡和最佳的平衡點，讓人們能更好地掌控自己的活動區域，在整個傾仰範圍內收放自如。
+         </p>
+          <p class="w3-large"><h2>NT$25,875</h2></p>
+    
+        </div>  
+     
+     <div class="w3-display-container">
+       <img src="images/Sayl-1.jpg" style="width: 100%" />
+       <div class="w3-display-bottommiddle w3-display-hover" >
+         
+         <button class="w3-button w3-black" id="item3">
+          加入購物車<i class="fa fa-shopping-cart" > </i>
+         </button>
+       </div>
+     </div>
+     <hr>
+     <!-- Footer -->
+     <div class="w3-light-grey w3-center bottom w3-row-padding">
+        <h5>copyright ⓒ 2022 BigBuy Inc. All Rights Reserved.</h5>
+    </div>
+    
+    <!-- Newsletter Modal -->
+    <div id="newsletter" class="w3-modal w3-card-4 w3-padding-16 " target="_blank">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;"> 
+                <!-- Contact Container -->
+                <!-- Modal content-->
+                <h3 class="display-15">登入</h3>
+                <i onclick="document.getElementById('newsletter').style.display='none'"
+                        class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <form class="w3-container" target="_blank">
+              <div class="form-group">
+                <label> 帳號/電子郵件</label>
+                <input type="text" class="form-control" id="usrname" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <label> 密碼</label>
+                <input type="text" class="form-control" id="psw" placeholder="Enter Password">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>記住帳號密碼</label>
+              </div>
+                <button type="button" class="btn btn-dark btn-block">登入</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>還沒註冊會員? <a href="signUp">註冊</a></p>
+          </div>
+        </div>
+        <!-- Modal content-->
+                <!-- Contact Container -->
+        </div>
+    </div>
+    <!-- Newsletter Modal -->
+         
+         <script>
+         function addsoon(data){
+        		if(data==123){
+        			alert('請先登入，才可繼續購物');
+        			location.href="http://localhost:8080/login";}
+        		else{
+        		alert('成功加入購物車');}
+        	}
+
+
+function item1(e){
+	e.preventDefault();		
+	$.post("AddToCar",{"ProductName":"HermanMillerAeron"},addsoon);
+}
+function item2(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"HermanMillerEmbody"},addsoon);
+}
+function item3(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"HermanMillerSayl"},addsoon);
+}
+
+function start(){
+	   $("#item1").click(item1);
+	   $("#item2").click(item2);
+	   $("#item3").click(item3);
+	   	  
+   }
+   $(document).ready(start);
+</script>
+</body>
+</html>

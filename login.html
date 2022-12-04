@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<title>BigBuy Online Store</title>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <style>
+  .modal-header, h4, .close {
+    background-color: #000000;
+    color:white !important;
+    text-align: center;
+    font-size: 30px;
+  }
+  .modal-footer {
+    background-color: #f9f9f9;
+  }
+  </style>
+</head>
+<body>
+
+<div class="container" style="padding:80px;" >
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header" style="padding:35px 50px;"> 
+          <h3><span class="glyphicon glyphicon-lock"></span> 登入</h3>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> 帳號/電子郵件</label>
+              <input type="text" class="form-control" name="username" id="username" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> 密碼</label>
+              <input type="text" class="form-control" name="password" id="password" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>記住帳號密碼</label>
+            </div>
+              <button id="loginbt" class="btn btn-dark btn-block"><span class="glyphicon glyphicon-off" ></span> 登入</button>
+         
+        </div>
+        <div class="modal-footer">
+        <div class="w3-light-grey  w3-padding-24">
+          <p>還沒註冊會員?<a href="signUp">註冊</a>
+          </p>
+          <a href="#product1" class="w3-bar-item w3-button">查詢密碼</a>
+        </div>
+        </div>
+        <div class="w3-light-grey w3-left w3-padding-24">copyright ⓒ 2022 BigBuy Inc. All Rights Reserved.</div>
+      </div>
+</div>
+<!-- Newsletter Modal -->
+
+        <div class="w3-modal-content w3-animate-zoom" style="padding:100px">
+            <div class="modal-content" id="product1">
+                <div class="modal-header" style="padding:35px 50px;"> 
+                <!-- Contact Container -->
+                <!-- Modal content-->
+                <h3 class="display-15">查詢密碼</h3>
+                <i onclick="document.getElementById('newsletterAAA').style.display='none'"
+                        class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <form class="w3-container" target="_blank">
+              <div class="form-group">
+                <label> 帳號/電子郵件</label>
+                <input type="text" class="form-control" id="namemail" placeholder="Enter Email">
+              </div>
+                <button type="button" class="btn btn-dark btn-block" id="bybtn">查詢</button>
+            </form>
+            <!-- 插入資訊 -->
+            	<div id="display" class="w3-section" style="text-align: left;"></div>
+            <!-- 插入資訊 -->
+          </div>
+        </div>
+        <!-- Modal content-->
+                <!-- Contact Container -->
+        </div>
+
+    <!-- Newsletter Modal --> 
+<script>
+function br(data){
+    $("#display").html(data);
+  }
+function logno(data){
+   if(data==123)
+	   {alert('帳號密碼錯誤，請重新輸入');
+	   }
+   else{location.href="http://localhost:8080/index";}
+  
+  }
+
+function login(evt){
+    var user=$("#username").val();
+    var pass=$("#password").val();
+    $.post("login",{"username":user,"password":pass},logno);
+  }
+
+
+function be(evt){
+    evt.preventDefault();
+    var m=$("#namemail").val();
+    $.post("customerpasssreach",{"namemail":m},br);
+  }
+function start(){
+	   $("#bybtn").click(be);
+	   $("#loginbt").click(login);
+   }
+$(document).ready(start);
+</script>
+</body>
+</html>

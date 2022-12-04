@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyHomeBody</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+     
+    <style>
+        body {
+            font-family: "Times New Roman", Georgia, Serif;
+        }
+
+        h1,h2,h3,h4,h5, h6 {
+            font-family: "Playfair Display";
+            letter-spacing: 5px;
+        }
+    </style>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--以下是網頁標題的LOGO圖示-->
+    <link rel="icon" href="/images/logo.png" />
+    <!--以下是icon的js-->
+    <script
+    src="https://kit.fontawesome.com/fe5bb6f718.js"
+    crossorigin="anonymous"
+    ></script>
+    <style>
+     * {
+            padding: 0;
+            margin: 0;
+            font-family: "Noto Sans TC", sans-serif;
+          }
+     h1, h2, h3, h4, h6 {
+      font-family: "Playfair Display";
+      letter-spacing: 5px;
+      }
+    
+    a{
+      text-decoration:none;
+    }
+    a:hover{
+      text-decoration:none;
+      }
+    </style>
+</head>
+
+<body>
+    <nav class="w3-top">
+        <div class="w3-bar w3-light-grey w3-card">
+          <img src="/images/logo.png" alt="LOGO" style="width: 75px;" class="w3-bar-item w3-padding-large">
+          	<a href="index" class="w3-bar-item w3-button w3-padding-large">首頁</a>
+            <a href="makeup" class="w3-bar-item w3-button w3-padding-large">美妝保養</a>
+            <a href="appleStore" class="w3-bar-item w3-button w3-padding-large">好吃蘋果</a>
+            <a href="client" class="w3-bar-item w3-button w3-padding-large">精品手飾</a>
+            <a href="computerweb" class="w3-bar-item w3-button w3-padding-large">商務筆電</a>
+            <a href="myhomebody" class="w3-bar-item w3-button w3-padding-large">優良小物</a>
+            <a href="hMProducts" class="w3-bar-item w3-button w3-padding-large">工學座椅</a>
+            <!-- 
+            <a href="javascript:void(0)" class="w3-padding-large w3-button w3-right"
+                onclick="document.getElementById('newsletter').style.display='block'">
+                <i class="fa-regular fa-user"></i></a>
+                 -->
+            <a href="member" class="w3-padding-large w3-button w3-right">
+                <i class="fa-regular fa-user"></i></i></a>
+            <a href="shopcar" class="w3-padding-large w3-button w3-right">
+                <i class="fa-solid fa-cart-shopping"></i></a>
+                  <span class="w3-right w3-padding-large" th:text="${member.username}"></span>
+        </div>
+     
+      <div class="w3-display-container">
+       <div>
+         <div class="w3-bar w3-white w3-card" style="letter-spacing:4px;">
+           <!-- 以下這邊是個別館別的商品選單列，大家自己改成自己的-->
+           <div class="w3-right">
+            <a href="#aboutbaby1" class="w3-bar-item w3-button" style="letter-spacing:4px;position: relative;right: 5px;">兒童海綿</a>
+            <a href="#face1" class="w3-bar-item w3-button" style="letter-spacing:4px;position: relative;right: 5px;">眼淚海綿</a>
+            <a href="#face5" class="w3-bar-item w3-button" style="letter-spacing:4px;position: relative;right: 5px;">饅頭海綿</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <br>
+    
+    <!-- Header 
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+        <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+        <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+            <h1 class="w3-xxlarge">Le Catering</h1>
+        </div>
+    </header>
+    -->
+    <h1 style="position: relative;left:45%;top:80px">MyHomeBody</h1>
+    <div id="demo" class="carousel slide" data-ride="carousel" style="position: relative;left:2%;top:120px">
+
+        <!-- Indicators -->
+        <ul class="carousel-indicators">
+        <li data-target="#demo" data-slide-to="0" class="active"></li>
+        <li data-target="#demo" data-slide-to="1"></li>
+        <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        
+        <!-- The slideshow -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="#aboutbaby1"><img src="images/scroll1.jpg" alt="babyspong" width="96%" ></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#face1"><img src="images/scroll2.jpg" alt="facespong1" width="96%"></a>
+            </div>
+            <div class="carousel-item">
+                <a href="#face5"><img src="images/scroll3.jpg" alt="facespong2" width="96%"></a>
+            </div>
+        </div>
+        
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev"  href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+
+    <!-- Page content -->
+    <div class="w3-content" style="max-width:1100px;position:relative;top:80px;">
+
+        <!-- About Section -->
+        <div class="w3-row w3-padding-48" id="aboutbaby1">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="images/baby1.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                    width="600" height="750">
+            </div>                
+            <div class="w3-col m6 w3-padding-large">
+                <h1 class="w3-center">Konjac Bath Sponges for Babies and Kids</h1><br>
+                <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                <p class="w3-large" style="font-size: 20px;">
+                    ✔️ Healthy and Safe! These Konjac Sponges are All Natural and Plant-based, Making them the Perfect Baby Bath Set!<br>
+                    ✔️ Cute Shapes! This Baby Bath Sponge set features Star, Ladybug and Butterfly will Appeal to Baby Girls and Boys Bath!</p><br>
+                    
+                <h2>$ 350 NT</h2>    
+                <br>
+                 <h4 class="w3-center"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item1">加入購物車</button></a></h4>
+    </div>
+            
+        </div>
+        
+        <div class="w3-row w3-padding-16" id="aboutbaby2">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="images/baby2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                    width="600" height="750">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+                <h1></h1><br>
+                <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                <p class="w3-large" style="font-size: 16px;">
+                    ✔️ Healthy and Safe! These Konjac Sponges are All Natural and Plant-based, Making them the Perfect Baby Bath Set!<br>
+                    ✔️ SIZE: Please See Product Photos<br>
+                    ✔️We Care about Your Satisfaction! myHomeBody wants to be a brand you trust! Buy with confidence knowing that If You're not Satisfied, We'll Make it Right - Reach Out to Us!</p><br>
+            </div>
+        </div>
+        <div class="w3-row w3-padding-16" id="aboutbaby3">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="images/baby3.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                        width="600" height="750">
+            </div>
+            <div class="w3-col m6 w3-padding-large">
+                <h1></h1><br>
+                <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                <p class="w3-large" style="font-size: 16px;">
+                    ✔️ Made from the Root of the Konjac Plant, Biodegradable and Compostable <br>
+                    ✔️Infused with a pinch of Natural Ingredients - Turmeric (Yellow), Pink Clay (Pink), Pure Konjac (Ivory) <br>
+                    ✔️These sponges are a Natural Product, they will start to fall apart - Replace them when they start to disintegrate. </p><br>
+            </div>
+        
+        
+            <div class="w3-row w3-padding-16" id="aboutbaby4">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="images/baby4.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                            width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="images/baby5.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                        width="600" height="750">
+            </div>
+        </div>
+    </div>
+                <hr>
+
+
+         <!-- About Section -->
+         <div class="w3-row w3-padding-48" id="face1">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="images/face2.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                    width="600" height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1></h1><br>
+                <h1 class="w3-center">Teardrop Konjac<br> Facial Sponges</h1><br>
+                <h5 class="w3-center">Color2 Aloe Green, 2 Charcoal Gray</h5>
+                <p class="w3-large" style="font-size: 16px;">
+                    ✔️ Teardrop Shape for Getting into Corners! A Natural, Vegan, Gentle Way to Cleanse!<br>
+                    ✔️High Quality, Uniform Pore Density</p>
+                    <h2>$ 350 NT</h2>  
+                 <br>
+                 <h4 class="w3-center"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item2">加入購物車</button></a></h4>
+   </div>
+        
+            <div class="w3-row w3-padding-16" id="face2">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="images/face1.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                        width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large">
+                    <h1></h1><br>
+                    <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                    <p class="w3-large" style="font-size: 16px;">
+                        ✔️Suitable for All Skin Types! Good for Delicate, Acne–prone, Sensitive Skin, Oily or Dry skin<br>
+                        ✔️ Made from the Root of the Konjac Plant and infused with Aloe Vera (2pc) and Activated Charcoal (2pc)</p>
+                    </div>
+            </div>
+
+            <div class="w3-row w3-padding-16" id="face3">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="images/face3.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                            width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large">
+                    <h1></h1><br>
+                    <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                    <p class="w3-large" style="font-size: 16px;">
+                        ✔️Biodegradable, Compostable Plant-based Material Size: 3.4" x 2. 6" x 1” (Wet)<br>
+                        ✔️We Care about Your Satisfaction! myHomeBody wants to be a brand you trust! Buy with confidence knowing that If You're not Satisfied, We'll Make it Right - Reach Out to Us!
+                     </div>
+            </div>
+        
+            <div class="w3-row w3-padding-16" id="face4">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="images/face6.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                            width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="images/face7.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                        width="600" height="750">
+            </div>
+        </div>
+        </div>
+        <hr>
+
+         <!-- About Section -->
+         <div class="w3-row w3-padding-48" id="face5">
+            <div class="w3-col m6 w3-padding-large w3-hide-small">
+                <img src="images/face4.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                    width="600" height="750">
+            </div>
+
+            <div class="w3-col m6 w3-padding-large">
+                <h1></h1><br>
+                <h1 class="w3-center"> Natural Konjac <br> Facial Sponges</h1><br>
+                <h5 class="w3-center">for Gentle Face Cleansing <br>and Exfoliation</h5>
+                <p class="w3-large" style="font-size: 16px;">
+                    ✔️ A Natural, Vegan, Gentle Way to Cleanse! Gentler on Skin Than Traditional Facecloth!<br>
+                    ✔️High Quality, Uniform Pore Density</p>
+                  <h2>$ 350 NT</h2>     
+                 <br>
+                 <h4 class="w3-center"><a href="#"><button type="button" class="btn btn-secondary btn-lg" id="item3">加入購物車</button></a></h4>
+    </div>
+        
+            <div class="w3-row w3-padding-16" id="face6">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="images/face1.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                        width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large">
+                    <h1></h1><br>
+                    <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                    <p class="w3-large" style="font-size: 16px;">
+                        ✔️ Suitable for All Skin Types! Good for Delicate, Acne–prone, Sensitive Skin, Oily or Dry skin.<br>
+                        ✔️ Made from the Root of the Konjac Plant and infused with Activated Charcoal(2pc) and Aloe Vera (2pc)</p>
+                    </div>
+            </div>
+
+            <div class="w3-row w3-padding-16" id="face7">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="images/face5.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                            width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large">
+                    <h1></h1><br>
+                    <h5 class="w3-center">ColorLadybug,butterfly,star</h5>
+                    <p class="w3-large" style="font-size: 16px;">
+                        ✔️Biodegradable, Compostable Plant-based Material SIZE: 2.1" x 3.3" x 1.2”<br>
+                        ✔️We Care about Your Satisfaction! myHomeBody wants to be a brand you trust! Buy with confidence knowing that If You're not Satisfied, We'll Make it Right - Reach Out to Us!</p>
+                     </div>
+            </div>
+            <div class="w3-row w3-padding-16" id="face8">
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                        <img src="images/face8.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                            width="600" height="750">
+                </div>
+                <div class="w3-col m6 w3-padding-large w3-hide-small">
+                    <img src="images/face9.jpg" class="w3-round w3-image w3-opacity-min" alt="Table Setting"
+                        width="600" height="750">
+            </div>
+        </div>
+        
+        </div>
+        <hr>
+
+        <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-light-grey w3-padding-32">
+        <div class="w3-light-grey w3-center bottom w3-row-padding">
+        <h5>copyright ⓒ 2022 BigBuy Inc. All Rights Reserved.</h5>
+    	</div>
+    </footer>
+
+<!-- Newsletter Modal -->
+    <div id="newsletter" class="w3-modal w3-card-4 w3-padding-16 " target="_blank">
+        <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+            <div class="modal-content">
+                <div class="modal-header" style="padding:35px 50px;"> 
+                <!-- Contact Container -->
+                <!-- Modal content-->
+                <h3 class="display-15">登入</h3>
+                <i onclick="document.getElementById('newsletter').style.display='none'"
+                        class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+          </div>
+          <div class="modal-body" style="padding:40px 50px;">
+            <form class="w3-container" target="_blank">
+              <div class="form-group">
+                <label> 帳號/電子郵件</label>
+                <input type="text" class="form-control" id="usrname" placeholder="Enter Email">
+              </div>
+              <div class="form-group">
+                <label> 密碼</label>
+                <input type="text" class="form-control" id="psw" placeholder="Enter Password">
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" checked>記住帳號密碼</label>
+              </div>
+                <button type="button" class="btn btn-dark btn-block">登入</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p>還沒註冊會員? <a href="signUp">註冊</a></p>
+          </div>
+        </div>
+        <!-- Modal content-->
+                <!-- Contact Container -->
+        </div>
+    </div>
+    <!-- Newsletter Modal -->
+<script>
+function addsoon(data){
+	if(data==123){
+		alert('請先登入，才可繼續購物');
+		location.href="http://localhost:8080/login";}
+	else{
+	alert('成功加入購物車');}
+}
+
+
+function item1(e){
+	e.preventDefault();		
+	$.post("AddToCar",{"ProductName":"BabySponge"},addsoon);
+}
+function item2(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"TearSpong"},addsoon);
+}
+function item3(e){
+	e.preventDefault();	
+	$.post("AddToCar",{"ProductName":"NatureSpong"},addsoon);
+}
+
+function start(){
+	   $("#item1").click(item1);
+	   $("#item2").click(item2);
+	   $("#item3").click(item3);
+	   	  
+   }
+   $(document).ready(start);
+</script>
+
+</body>
+
+</html>
